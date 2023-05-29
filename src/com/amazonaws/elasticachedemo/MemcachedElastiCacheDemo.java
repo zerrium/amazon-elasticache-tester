@@ -85,7 +85,7 @@ public class MemcachedElastiCacheDemo {
 	private void loadProperties() throws IOException {
 		System.out.println("Reading config file...");
 		properties = new Properties();
-		FileInputStream fis = new FileInputStream(new File(System.getProperty("CONFIG_FILE_NAME")));
+		FileInputStream fis = new FileInputStream(new File("resources/Redis_config.properties"));
 		properties.load(fis);
 		memcachedHost = properties.getProperty("MEMCACHED_CLUSTER_ENDPOINT_HOSTNAME");
 		memcachedPort = Integer.parseInt(properties.getProperty("MEMCACHED_CLUSTER_ENDPOINT_PORT"));

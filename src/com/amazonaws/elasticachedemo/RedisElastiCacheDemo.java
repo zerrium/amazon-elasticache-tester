@@ -75,7 +75,7 @@ public class RedisElastiCacheDemo {
 	private void loadProperties() throws IOException {
 		System.out.println("Reading config file...");
 		properties = new Properties();
-		FileInputStream fis = new FileInputStream(new File(System.getProperty("CONFIG_FILE_NAME")));
+		FileInputStream fis = new FileInputStream(new File("resources/Memcached_config.properties"));
 		properties.load(fis);
 		redisHost = properties.getProperty("REDIS_CLUSTER_ENDPOINT_HOSTNAME");
 		redisPort = Integer.parseInt(properties.getProperty("REDIS_CLUSTER_ENDPOINT_PORT"));
